@@ -1,71 +1,11 @@
-<!--
-Project: Maria Saigon - Vietnamese Bistro
-Language: Deutsch
-Design system: Fresheat / design-system-fresheat
-Image naming rule: assets/images/menu/{category}__{slug}.webp
-Order receiver: mariasaigon.bistro@gmail.com
-
-Image checklist:
-Brand / layout:
-assets/images/brand/logo.webp
-assets/images/brand/logo-white.webp
-assets/images/hero/hero-vietnamese-food.webp
-assets/images/hero/hero-pho-bowl.webp
-assets/images/banner/grand-opening-march-2027.webp
-assets/images/placeholders/menu-placeholder.webp
-assets/images/placeholders/hero-placeholder.webp
-
-Food:
-assets/images/menu/pho__pho-spezial.webp
-assets/images/menu/pho__pho-bo.webp
-assets/images/menu/pho__pho-ga.webp
-assets/images/menu/reis__com-ga-xoi-mo.webp
-assets/images/menu/reis__com-chien-bo.webp
-assets/images/menu/reis__com-chien-toi.webp
-assets/images/menu/reis__bo-luc-lac-khoai-tay.webp
-assets/images/menu/nudeln__bun-thit-nuong.webp
-assets/images/menu/nudeln__bun-cha-gio.webp
-assets/images/menu/nudeln__bun-bo-xao-nam-bo.webp
-assets/images/menu/nudeln__mi-xao-bo.webp
-assets/images/menu/andere__wantan-suppe.webp
-assets/images/menu/andere__bo-kho.webp
-assets/images/menu/vorspeisen__goi-cuon-tom-bo.webp
-assets/images/menu/vorspeisen__cha-gio.webp
-assets/images/menu/vorspeisen__hoanh-thanh-chien.webp
-
-Drinks:
-assets/images/menu/kaffee__ca-phe-sua-da.webp
-assets/images/menu/kaffee__ca-phe-trung.webp
-assets/images/menu/kaffee__ca-phe-muoi.webp
-assets/images/menu/kaffee__summer-cold-brew-kaffee.webp
-assets/images/menu/matcha__matcha-latte.webp
-assets/images/menu/matcha__matcha-lotus.webp
-assets/images/menu/matcha__kokos-matcha.webp
-assets/images/menu/matcha__tiramisu-matcha.webp
-assets/images/menu/matcha__matcha-cold-whisk.webp
-assets/images/menu/hausgemachter-eistee__zitronengras-pfirsich-eistee.webp
-assets/images/menu/hausgemachter-eistee__jasmin-oolong-eistee.webp
-assets/images/menu/hausgemachter-eistee__erdbeer-eistee.webp
-assets/images/menu/heissen-tee__jasmin-gruentee.webp
-assets/images/menu/heissen-tee__ingwertee.webp
-assets/images/menu/heissen-tee__fruechtetee.webp
-assets/images/menu/heissen-tee__pfefferminztee.webp
-assets/images/menu/softdrinks__cola.webp
-assets/images/menu/softdrinks__cola-zero.webp
-assets/images/menu/softdrinks__fanta.webp
-assets/images/menu/softdrinks__sprite.webp
-assets/images/menu/softdrinks__valser-prickelnd.webp
-assets/images/menu/softdrinks__valser-still.webp
-assets/images/menu/softdrinks__feldschloesschen-bier.webp
-assets/images/menu/softdrinks__calanda-bier.webp
-assets/images/menu/softdrinks__saigon-bier.webp
--->
 <!doctype html>
 <html lang="de">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Maria Saigon - Vietnamese Bistro in Chur. Vietnamesische Küche, Pho, Reisgerichte, Nudeln und hausgemachte Getränke.">
+  <meta name="description"
+    content="Maria Saigon - Vietnamese Bistro in Chur. Vietnamesische Küche, Pho, Reisgerichte, Nudeln und hausgemachte Getränke.">
   <title>Maria Saigon - Vietnamese Bistro</title>
   <style>
     :root {
@@ -98,8 +38,14 @@ assets/images/menu/softdrinks__saigon-bier.webp
       --container: 1180px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: var(--font-family-primary);
@@ -110,15 +56,37 @@ assets/images/menu/softdrinks__saigon-bier.webp
       background: var(--color-bg);
       overflow-x: hidden;
     }
-    body.drawer-open { overflow: hidden; }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-    button, input, textarea { font: inherit; }
+
+    body.drawer-open {
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
     :focus-visible {
       outline: 3px solid var(--color-brand-primary);
       outline-offset: 3px;
     }
-    .container { width: min(calc(100% - 32px), var(--container)); margin: 0 auto; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--container));
+      margin: 0 auto;
+    }
+
     .skip-link {
       position: fixed;
       left: 16px;
@@ -130,7 +98,10 @@ assets/images/menu/softdrinks__saigon-bier.webp
       padding: 10px 14px;
       border-radius: var(--radius-xs);
     }
-    .skip-link:focus { transform: translateY(0); }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
 
     .btn {
       min-height: 44px;
@@ -145,39 +116,109 @@ assets/images/menu/softdrinks__saigon-bier.webp
       cursor: pointer;
       transition: transform var(--motion-duration-instant), background var(--motion-duration-instant), border-color var(--motion-duration-instant), color var(--motion-duration-instant);
     }
-    .btn:hover { transform: translateY(-1px); }
-    .btn:active { transform: translateY(0); }
-    .btn:disabled, .btn.is-loading { opacity: 0.58; cursor: not-allowed; transform: none; }
-    .btn-primary { background: var(--color-brand-dark); color: var(--color-text-tertiary); box-shadow: var(--shadow-1); }
-    .btn-primary:hover { background: #3f5a20; }
-    .btn-secondary { background: var(--color-brand-soft); color: var(--color-brand-dark); border-color: rgba(79,111,40,0.18); }
-    .btn-secondary:hover { background: #e2f1d8; }
-    .btn-ghost { background: var(--color-bg); color: var(--color-brand-dark); border-color: var(--color-border); }
-    .btn-ghost:hover { border-color: var(--color-brand-primary); }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn:disabled,
+    .btn.is-loading {
+      opacity: 0.58;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-primary {
+      background: var(--color-brand-dark);
+      color: var(--color-text-tertiary);
+      box-shadow: var(--shadow-1);
+    }
+
+    .btn-primary:hover {
+      background: #3f5a20;
+    }
+
+    .btn-secondary {
+      background: var(--color-brand-soft);
+      color: var(--color-brand-dark);
+      border-color: rgba(79, 111, 40, 0.18);
+    }
+
+    .btn-secondary:hover {
+      background: #e2f1d8;
+    }
+
+    .btn-ghost {
+      background: var(--color-bg);
+      color: var(--color-brand-dark);
+      border-color: var(--color-border);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--color-brand-primary);
+    }
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255,255,255,0.94);
+      background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--color-border);
       transition: box-shadow var(--motion-duration-instant);
     }
-    .site-header.is-scrolled { box-shadow: 0 10px 24px rgba(79,111,40,0.10); }
-    .nav-wrap { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
-    .brand { display: flex; align-items: center; gap: 12px; min-width: 190px; }
-    .brand-mark {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 34% 32%, #ffffff 0 14%, #b9d98c 15% 35%, var(--color-brand-primary) 36% 100%);
-      border: 1px solid rgba(79,111,40,0.20);
+
+    .site-header.is-scrolled {
+      box-shadow: 0 10px 24px rgba(79, 111, 40, 0.10);
+    }
+
+    .nav-wrap {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
+
+    .brand-logo {
+      width: 86px;
+      height: 64px;
+      object-fit: contain;
+      border-radius: 0;
       flex: 0 0 auto;
     }
-    .brand strong { display: block; color: var(--color-surface-base); font-size: 19px; line-height: 20px; }
-    .brand span { display: block; font-size: var(--font-size-xs); color: var(--color-brand-dark); line-height: 16px; }
-    .nav-links { display: flex; align-items: center; gap: 4px; }
+
+    .brand strong {
+      display: block;
+      color: var(--color-surface-base);
+      font-size: 19px;
+      line-height: 20px;
+    }
+
+    .brand span {
+      display: block;
+      font-size: var(--font-size-xs);
+      color: var(--color-brand-dark);
+      line-height: 16px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
     .nav-links a {
       min-height: 44px;
       display: inline-flex;
@@ -188,10 +229,28 @@ assets/images/menu/softdrinks__saigon-bier.webp
       font-weight: 700;
       font-size: var(--font-size-sm);
     }
-    .nav-links a:hover, .nav-links a:active { background: var(--color-brand-soft); }
-    .nav-actions { display: flex; align-items: center; gap: 10px; }
-    .menu-toggle { display: none; width: 46px; height: 46px; padding: 0; }
-    .hamburger, .hamburger::before, .hamburger::after {
+
+    .nav-links a:hover,
+    .nav-links a:active {
+      background: var(--color-brand-soft);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      padding: 0;
+    }
+
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
       width: 20px;
       height: 2px;
       background: currentColor;
@@ -200,16 +259,29 @@ assets/images/menu/softdrinks__saigon-bier.webp
       display: block;
       transition: transform var(--motion-duration-instant);
     }
-    .hamburger::before { transform: translateY(-7px); }
-    .hamburger::after { transform: translateY(5px); }
+
+    .hamburger::before {
+      transform: translateY(-7px);
+    }
+
+    .hamburger::after {
+      transform: translateY(5px);
+    }
 
     .hero {
       background:
-        radial-gradient(circle at 78% 18%, rgba(130,180,64,0.22), transparent 30%),
+        radial-gradient(circle at 78% 18%, rgba(130, 180, 64, 0.22), transparent 30%),
         linear-gradient(135deg, #ffffff 0%, #f5fbf0 52%, #e8f4df 100%);
       padding: 84px 0 60px;
     }
-    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
+      gap: clamp(28px, 5vw, 72px);
+      align-items: center;
+    }
+
     .eyebrow {
       display: inline-flex;
       align-items: center;
@@ -217,20 +289,28 @@ assets/images/menu/softdrinks__saigon-bier.webp
       border-radius: 999px;
       color: var(--color-brand-dark);
       background: #ffffff;
-      border: 1px solid rgba(79,111,40,0.18);
+      border: 1px solid rgba(79, 111, 40, 0.18);
       padding: 8px 12px;
       font-size: var(--font-size-sm);
       font-weight: 800;
     }
+
     .eyebrow::before {
       content: "";
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background: var(--color-brand-primary);
-      box-shadow: 0 0 0 5px rgba(130,180,64,0.16);
+      box-shadow: 0 0 0 5px rgba(130, 180, 64, 0.16);
     }
-    h1, h2, h3, p { margin-top: 0; }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
     h1 {
       margin: 22px 0 18px;
       color: var(--color-surface-base);
@@ -239,19 +319,39 @@ assets/images/menu/softdrinks__saigon-bier.webp
       letter-spacing: 0;
       max-width: 760px;
     }
-    .hero p { font-size: clamp(17px, 2vw, 21px); line-height: 1.55; max-width: 660px; }
-    .hero-actions, .section-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+    .hero p {
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.55;
+      max-width: 660px;
+    }
+
+    .hero-actions,
+    .section-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
     .hero-card {
       min-height: 440px;
       border-radius: var(--radius-lg);
       overflow: hidden;
       background: linear-gradient(145deg, #dcefd0, #ffffff 48%, #9fc96a);
-      border: 1px solid rgba(79,111,40,0.18);
+      border: 1px solid rgba(79, 111, 40, 0.18);
       box-shadow: var(--shadow-card);
       position: relative;
       isolation: isolate;
     }
-    .hero-card img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; }
+
+    .hero-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 440px;
+      object-fit: cover;
+    }
+
     .hero-card::after {
       content: "Pho  Reisgerichte  Kaffee";
       position: absolute;
@@ -259,8 +359,8 @@ assets/images/menu/softdrinks__saigon-bier.webp
       right: 20px;
       bottom: 20px;
       color: var(--color-text-tertiary);
-      background: rgba(0,0,0,0.46);
-      border: 1px solid rgba(255,255,255,0.22);
+      background: rgba(0, 0, 0, 0.46);
+      border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: 999px;
       padding: 12px 16px;
       font-weight: 800;
@@ -268,23 +368,56 @@ assets/images/menu/softdrinks__saigon-bier.webp
       backdrop-filter: blur(8px);
     }
 
-    section { padding: 74px 0; }
-    .section-head { display: flex; justify-content: space-between; gap: 24px; align-items: end; margin-bottom: 28px; }
-    .section-kicker { color: var(--color-brand-dark); font-weight: 800; font-size: var(--font-size-sm); margin-bottom: 8px; }
-    h2 { color: var(--color-surface-base); font-size: clamp(30px, 4vw, 48px); line-height: 1.05; margin-bottom: 12px; letter-spacing: 0; }
-    .section-head p, .opening p { max-width: 720px; font-size: 17px; line-height: 1.6; }
-    .opening { background: var(--color-brand-soft); }
+    section {
+      padding: 74px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      color: var(--color-brand-dark);
+      font-weight: 800;
+      font-size: var(--font-size-sm);
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      color: var(--color-surface-base);
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.05;
+      margin-bottom: 12px;
+      letter-spacing: 0;
+    }
+
+    .section-head p,
+    .opening p {
+      max-width: 720px;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .opening {
+      background: var(--color-brand-soft);
+    }
+
     .opening-panel {
       display: grid;
       grid-template-columns: minmax(0, 1fr) 260px;
       gap: 28px;
       align-items: center;
       background: var(--color-card);
-      border: 1px solid rgba(79,111,40,0.16);
+      border: 1px solid rgba(79, 111, 40, 0.16);
       border-radius: var(--radius-lg);
       padding: clamp(24px, 4vw, 44px);
       box-shadow: var(--shadow-card);
     }
+
     .opening-date {
       min-height: 190px;
       border-radius: var(--radius-md);
@@ -299,8 +432,20 @@ assets/images/menu/softdrinks__saigon-bier.webp
       font-weight: 900;
     }
 
-    .menu-tools { display: grid; gap: 16px; margin-bottom: 26px; }
-    .tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: thin; }
+    .menu-tools {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 26px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      scrollbar-width: thin;
+    }
+
     .tab {
       flex: 0 0 auto;
       min-height: 44px;
@@ -313,11 +458,32 @@ assets/images/menu/softdrinks__saigon-bier.webp
       cursor: pointer;
       transition: background var(--motion-duration-instant), border-color var(--motion-duration-instant), transform var(--motion-duration-instant);
     }
-    .tab:hover { border-color: var(--color-brand-primary); background: var(--color-brand-soft); }
-    .tab:active { transform: scale(0.98); }
-    .tab[aria-pressed="true"] { background: var(--color-brand-dark); color: var(--color-text-tertiary); border-color: var(--color-brand-dark); }
-    .search-row label { display: block; font-weight: 800; color: var(--color-surface-base); margin-bottom: 8px; }
-    .search-input, .field input, .field textarea {
+
+    .tab:hover {
+      border-color: var(--color-brand-primary);
+      background: var(--color-brand-soft);
+    }
+
+    .tab:active {
+      transform: scale(0.98);
+    }
+
+    .tab[aria-pressed="true"] {
+      background: var(--color-brand-dark);
+      color: var(--color-text-tertiary);
+      border-color: var(--color-brand-dark);
+    }
+
+    .search-row label {
+      display: block;
+      font-weight: 800;
+      color: var(--color-surface-base);
+      margin-bottom: 8px;
+    }
+
+    .search-input,
+    .field input,
+    .field textarea {
       width: 100%;
       min-height: 48px;
       border: 1px solid var(--color-border);
@@ -327,35 +493,129 @@ assets/images/menu/softdrinks__saigon-bier.webp
       color: var(--color-surface-base);
       transition: border-color var(--motion-duration-instant), box-shadow var(--motion-duration-instant);
     }
-    .search-input:hover, .field input:hover, .field textarea:hover { border-color: rgba(79,111,40,0.40); }
-    .field.is-error input, .field.is-error textarea { border-color: #b42318; box-shadow: 0 0 0 3px rgba(180,35,24,0.12); }
-    .field .error { display: none; color: #b42318; font-size: var(--font-size-sm); margin-top: 5px; }
-    .field.is-error .error { display: block; }
 
-    .menu-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .search-input:hover,
+    .field input:hover,
+    .field textarea:hover {
+      border-color: rgba(79, 111, 40, 0.40);
+    }
+
+    .field.is-error input,
+    .field.is-error textarea {
+      border-color: #b42318;
+      box-shadow: 0 0 0 3px rgba(180, 35, 24, 0.12);
+    }
+
+    .field .error {
+      display: none;
+      color: #b42318;
+      font-size: var(--font-size-sm);
+      margin-top: 5px;
+    }
+
+    .field.is-error .error {
+      display: block;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
     .menu-card {
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
       background: var(--color-card);
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(79,111,40,0.06);
+      box-shadow: 0 8px 24px rgba(79, 111, 40, 0.06);
       transition: transform var(--motion-duration-instant), box-shadow var(--motion-duration-instant), border-color var(--motion-duration-instant);
       display: flex;
       flex-direction: column;
       min-width: 0;
     }
-    .menu-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-card); border-color: rgba(130,180,64,0.40); }
-    .menu-img-wrap { aspect-ratio: 4 / 3; background: linear-gradient(135deg, #eef7e8, #ffffff 48%, #cfe6b9); overflow: hidden; }
-    .menu-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
-    .menu-body { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; min-width: 0; }
-    .category-label { align-self: flex-start; border-radius: 999px; background: var(--color-brand-soft); color: var(--color-brand-dark); padding: 4px 9px; font-size: var(--font-size-xs); font-weight: 900; text-transform: uppercase; letter-spacing: 0; }
-    .menu-title { color: var(--color-surface-base); font-size: 20px; line-height: 1.18; margin: 0; overflow-wrap: anywhere; }
-    .menu-description { margin: 0; color: var(--color-text-primary); line-height: 1.5; overflow-wrap: anywhere; flex: 1; }
-    .menu-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 4px; }
-    .price { color: var(--color-brand-dark); font-weight: 900; white-space: nowrap; }
+
+    .menu-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card);
+      border-color: rgba(130, 180, 64, 0.40);
+    }
+
+    .menu-img-wrap {
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(135deg, #eef7e8, #ffffff 48%, #cfe6b9);
+      overflow: hidden;
+    }
+
+    .menu-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .menu-card--getraenke .menu-img-wrap {
+      aspect-ratio: 389 / 292;
+    }
+
+    .menu-card--getraenke .menu-img-wrap img {
+      object-fit: contain;
+      padding: 8px;
+    }
+
+    .menu-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .category-label {
+      align-self: flex-start;
+      border-radius: 999px;
+      background: var(--color-brand-soft);
+      color: var(--color-brand-dark);
+      padding: 4px 9px;
+      font-size: var(--font-size-xs);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+
+    .menu-title {
+      color: var(--color-surface-base);
+      font-size: 20px;
+      line-height: 1.18;
+      margin: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .menu-description {
+      margin: 0;
+      color: var(--color-text-primary);
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+      flex: 1;
+    }
+
+    .menu-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    .price {
+      color: var(--color-brand-dark);
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
     .empty-state {
       grid-column: 1 / -1;
-      border: 1px dashed rgba(79,111,40,0.34);
+      border: 1px dashed rgba(79, 111, 40, 0.34);
       border-radius: var(--radius-md);
       background: var(--color-brand-soft);
       padding: 28px;
@@ -364,39 +624,88 @@ assets/images/menu/softdrinks__saigon-bier.webp
       font-weight: 800;
     }
 
-    .hours-contact { background: linear-gradient(180deg, #ffffff, #f8fcf5); }
-    .info-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 22px; }
+    .hours-contact {
+      background: linear-gradient(180deg, #ffffff, #f8fcf5);
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+    }
+
     .info-card {
       background: var(--color-card);
       border: 1px solid var(--color-border);
       border-radius: var(--radius-lg);
       padding: clamp(22px, 3vw, 34px);
-      box-shadow: 0 10px 28px rgba(79,111,40,0.08);
+      box-shadow: 0 10px 28px rgba(79, 111, 40, 0.08);
     }
-    .hours-row, .contact-row {
+
+    .hours-row,
+    .contact-row {
       display: flex;
       justify-content: space-between;
       gap: 18px;
       padding: 14px 0;
       border-bottom: 1px solid var(--color-border);
     }
-    .hours-row:last-child, .contact-row:last-of-type { border-bottom: 0; }
-    .hours-row strong, .contact-row strong { color: var(--color-surface-base); }
-    .contact-row { flex-direction: column; gap: 4px; }
-    .contact-row a { color: var(--color-brand-dark); font-weight: 800; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 
-    .footer { background: var(--color-brand-dark); color: rgba(255,255,255,0.84); padding: 38px 0; }
-    .footer-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 24px; align-items: start; }
-    .footer strong { color: var(--color-text-tertiary); display: block; margin-bottom: 6px; }
-    .footer a { text-decoration: underline; text-underline-offset: 3px; }
+    .hours-row:last-child,
+    .contact-row:last-of-type {
+      border-bottom: 0;
+    }
+
+    .hours-row strong,
+    .contact-row strong {
+      color: var(--color-surface-base);
+    }
+
+    .contact-row {
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .contact-row a {
+      color: var(--color-brand-dark);
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .footer {
+      background: var(--color-brand-dark);
+      color: rgba(255, 255, 255, 0.84);
+      padding: 38px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer strong {
+      color: var(--color-text-tertiary);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .footer a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
 
     .cart-fab {
       position: fixed;
       right: 18px;
       bottom: 18px;
       z-index: 45;
-      box-shadow: 0 14px 34px rgba(79,111,40,0.24);
+      box-shadow: 0 14px 34px rgba(79, 111, 40, 0.24);
     }
+
     .cart-count {
       min-width: 26px;
       height: 26px;
@@ -409,16 +718,22 @@ assets/images/menu/softdrinks__saigon-bier.webp
       font-weight: 900;
       padding: 0 6px;
     }
+
     .drawer-backdrop {
       position: fixed;
       inset: 0;
       z-index: 80;
-      background: rgba(0,0,0,0.42);
+      background: rgba(0, 0, 0, 0.42);
       opacity: 0;
       pointer-events: none;
       transition: opacity var(--motion-duration-instant);
     }
-    .drawer-backdrop.is-open { opacity: 1; pointer-events: auto; }
+
+    .drawer-backdrop.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
     .cart-drawer {
       position: fixed;
       top: 0;
@@ -427,17 +742,42 @@ assets/images/menu/softdrinks__saigon-bier.webp
       height: 100dvh;
       z-index: 90;
       background: var(--color-bg);
-      box-shadow: -18px 0 46px rgba(0,0,0,0.18);
+      box-shadow: -18px 0 46px rgba(0, 0, 0, 0.18);
       transform: translateX(104%);
       transition: transform var(--motion-duration-instant);
       display: flex;
       flex-direction: column;
     }
-    .cart-drawer.is-open { transform: translateX(0); }
-    .drawer-head { padding: 18px; border-bottom: 1px solid var(--color-border); display: flex; justify-content: space-between; gap: 14px; align-items: center; }
-    .drawer-head h2 { font-size: 26px; margin: 0; }
-    .drawer-body { padding: 18px; overflow: auto; flex: 1; }
-    .cart-items { display: grid; gap: 12px; }
+
+    .cart-drawer.is-open {
+      transform: translateX(0);
+    }
+
+    .drawer-head {
+      padding: 18px;
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .drawer-head h2 {
+      font-size: 26px;
+      margin: 0;
+    }
+
+    .drawer-body {
+      padding: 18px;
+      overflow: auto;
+      flex: 1;
+    }
+
+    .cart-items {
+      display: grid;
+      gap: 12px;
+    }
+
     .cart-item {
       border: 1px solid var(--color-border);
       border-radius: var(--radius-md);
@@ -445,21 +785,97 @@ assets/images/menu/softdrinks__saigon-bier.webp
       display: grid;
       gap: 10px;
     }
-    .cart-item-head { display: flex; justify-content: space-between; gap: 12px; align-items: start; }
-    .cart-item h3 { margin: 0; color: var(--color-surface-base); font-size: 17px; line-height: 1.25; }
-    .qty-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .qty-controls { display: flex; align-items: center; gap: 8px; }
-    .qty-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--color-border); background: var(--color-card); color: var(--color-brand-dark); font-weight: 900; cursor: pointer; }
-    .qty-btn:hover { background: var(--color-brand-soft); }
-    .remove-btn { border: 0; background: transparent; color: #8a1f11; min-height: 44px; font-weight: 800; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
-    .total-row { display: flex; justify-content: space-between; gap: 16px; padding: 18px 0; font-size: 20px; color: var(--color-surface-base); font-weight: 900; }
-    .order-form { display: grid; gap: 14px; padding-top: 8px; }
-    .field label { display: block; color: var(--color-surface-base); font-weight: 800; margin-bottom: 7px; }
-    .field textarea { min-height: 94px; resize: vertical; }
-    .status-message { min-height: 24px; color: var(--color-brand-dark); font-weight: 800; }
+
+    .cart-item-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+    }
+
+    .cart-item h3 {
+      margin: 0;
+      color: var(--color-surface-base);
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    .qty-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .qty-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .qty-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--color-border);
+      background: var(--color-card);
+      color: var(--color-brand-dark);
+      font-weight: 900;
+      cursor: pointer;
+    }
+
+    .qty-btn:hover {
+      background: var(--color-brand-soft);
+    }
+
+    .remove-btn {
+      border: 0;
+      background: transparent;
+      color: #8a1f11;
+      min-height: 44px;
+      font-weight: 800;
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+      font-size: 20px;
+      color: var(--color-surface-base);
+      font-weight: 900;
+    }
+
+    .order-form {
+      display: grid;
+      gap: 14px;
+      padding-top: 8px;
+    }
+
+    .field label {
+      display: block;
+      color: var(--color-surface-base);
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    .field textarea {
+      min-height: 94px;
+      resize: vertical;
+    }
+
+    .status-message {
+      min-height: 24px;
+      color: var(--color-brand-dark);
+      font-weight: 800;
+    }
+
     .empty-cart {
       background: var(--color-brand-soft);
-      border: 1px dashed rgba(79,111,40,0.34);
+      border: 1px dashed rgba(79, 111, 40, 0.34);
       border-radius: var(--radius-md);
       padding: 18px;
       color: var(--color-brand-dark);
@@ -479,38 +895,127 @@ assets/images/menu/softdrinks__saigon-bier.webp
         flex-direction: column;
         align-items: stretch;
       }
-      .nav-links.is-open { display: flex; }
-      .nav-links a { justify-content: center; }
-      .menu-toggle { display: inline-flex; }
-      .nav-actions .btn-secondary { display: none; }
-      .hero-grid, .opening-panel, .info-grid { grid-template-columns: 1fr; }
-      .hero { padding-top: 52px; }
-      .hero-card, .hero-card img { min-height: 330px; }
-      .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .section-head { display: block; }
-      .footer-grid { grid-template-columns: 1fr; }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        justify-content: center;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-actions .btn-secondary {
+        display: none;
+      }
+
+      .hero-grid,
+      .opening-panel,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      .hero-card,
+      .hero-card img {
+        min-height: 330px;
+      }
+
+      .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 620px) {
-      .container { width: min(calc(100% - 24px), var(--container)); }
-      .nav-wrap { height: 70px; }
-      .brand strong { font-size: 17px; }
-      .brand-mark { width: 40px; height: 40px; }
-      .nav-links { inset: 70px 12px auto 12px; }
-      .nav-actions .btn-primary { display: none; }
-      section { padding: 54px 0; }
-      h1 { font-size: clamp(38px, 13vw, 54px); }
-      .hero-actions, .section-actions { flex-direction: column; align-items: stretch; }
-      .hero-card, .hero-card img { min-height: 270px; }
-      .menu-grid { grid-template-columns: 1fr; }
-      .menu-bottom { align-items: stretch; flex-direction: column; }
-      .menu-bottom .btn { width: 100%; }
-      .hours-row { flex-direction: column; gap: 2px; }
-      .cart-fab { left: 12px; right: 12px; bottom: 12px; width: calc(100% - 24px); }
+      .container {
+        width: min(calc(100% - 24px), var(--container));
+      }
+
+      .nav-wrap {
+        height: 70px;
+      }
+
+      .brand strong {
+        font-size: 17px;
+      }
+
+      .brand-logo {
+        width: 66px;
+        height: 50px;
+      }
+
+      .nav-links {
+        inset: 70px 12px auto 12px;
+      }
+
+      .nav-actions .btn-primary {
+        display: none;
+      }
+
+      section {
+        padding: 54px 0;
+      }
+
+      h1 {
+        font-size: clamp(38px, 13vw, 54px);
+      }
+
+      .hero-actions,
+      .section-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-card,
+      .hero-card img {
+        min-height: 270px;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-bottom {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .menu-bottom .btn {
+        width: 100%;
+      }
+
+      .hours-row {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .cart-fab {
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        width: calc(100% - 24px);
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
+
+      *,
+      *::before,
+      *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
@@ -519,12 +1024,13 @@ assets/images/menu/softdrinks__saigon-bier.webp
     }
   </style>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
   <header class="site-header" id="siteHeader">
     <div class="container nav-wrap">
       <a class="brand" href="#start" aria-label="Maria Saigon Startseite">
-        <span class="brand-mark" aria-hidden="true"></span>
+        <img class="brand-logo" src="assets/images/brand/logo.webp" alt="" aria-hidden="true">
         <span><strong>Maria Saigon</strong><span>Vietnamese Bistro</span></span>
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Hauptnavigation">
@@ -537,7 +1043,8 @@ assets/images/menu/softdrinks__saigon-bier.webp
       <div class="nav-actions">
         <a class="btn btn-primary" href="tel:+41798590859">Jetzt anrufen</a>
         <a class="btn btn-secondary" href="#menu">Menü ansehen</a>
-        <button class="btn btn-ghost menu-toggle" id="menuToggle" type="button" aria-label="Navigation öffnen" aria-controls="navLinks" aria-expanded="false">
+        <button class="btn btn-ghost menu-toggle" id="menuToggle" type="button" aria-label="Navigation öffnen"
+          aria-controls="navLinks" aria-expanded="false">
           <span class="hamburger" aria-hidden="true"></span>
         </button>
       </div>
@@ -550,14 +1057,16 @@ assets/images/menu/softdrinks__saigon-bier.webp
         <div>
           <span class="eyebrow">Eröffnung März 2027</span>
           <h1>Authentische vietnamesische Küche im Herzen von Chur</h1>
-          <p>Frische Pho, Reisgerichte, Nudeln, hausgemachte Getränke und vietnamesische Klassiker - bald bei Maria Saigon Vietnamese Bistro.</p>
+          <p>Frische Pho, Reisgerichte, Nudeln, hausgemachte Getränke und vietnamesische Klassiker - bald bei Maria
+            Saigon Vietnamese Bistro.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#menu">Menü entdecken</a>
             <a class="btn btn-ghost" href="#kontakt">Kontakt aufnehmen</a>
           </div>
         </div>
         <div class="hero-card" aria-label="Vietnamesische Spezialitäten">
-          <img src="assets/images/hero/hero-vietnamese-food.webp" alt="Vietnamesische Speisen bei Maria Saigon" loading="eager" decoding="async" onerror="handleImageError(this, true)">
+          <img src="assets/images/hero/hero-vietnamese-food.webp" alt="Vietnamesische Speisen bei Maria Saigon"
+            loading="eager" decoding="async" onerror="handleImageError(this, true)">
         </div>
       </div>
     </section>
@@ -567,9 +1076,12 @@ assets/images/menu/softdrinks__saigon-bier.webp
         <div>
           <p class="section-kicker">Bald in Chur</p>
           <h2>Große Eröffnung im März 2027</h2>
-          <p>Wir freuen uns darauf, Sie bald bei Maria Saigon Vietnamese Bistro in Chur begrüßen zu dürfen. Erleben Sie vietnamesische Küche mit frischen Zutaten, aromatischen Brühen und hausgemachten Getränken.</p>
+          <p>Wir freuen uns darauf, Sie bald bei Maria Saigon Vietnamese Bistro in Chur begrüßen zu dürfen. Erleben Sie
+            vietnamesische Küche mit frischen Zutaten, aromatischen Brühen und hausgemachten Getränken.</p>
           <div class="section-actions">
-            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Grabenstrasse%207%2C%207000%20Chur%2C%20Switzerland" target="_blank" rel="noopener">Adresse anzeigen</a>
+            <a class="btn btn-primary"
+              href="https://www.google.com/maps/search/?api=1&query=Grabenstrasse%207%2C%207000%20Chur%2C%20Switzerland"
+              target="_blank" rel="noopener">Adresse anzeigen</a>
             <a class="btn btn-secondary" href="tel:+41798590859">Anrufen</a>
           </div>
         </div>
@@ -590,7 +1102,8 @@ assets/images/menu/softdrinks__saigon-bier.webp
           <div class="tabs" id="menuTabs" aria-label="Menü filtern"></div>
           <div class="search-row">
             <label for="menuSearch">Suche</label>
-            <input class="search-input" id="menuSearch" type="search" placeholder="Gericht oder Getränk suchen..." autocomplete="off">
+            <input class="search-input" id="menuSearch" type="search" placeholder="Gericht oder Getränk suchen..."
+              autocomplete="off">
           </div>
         </div>
         <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
@@ -625,11 +1138,14 @@ assets/images/menu/softdrinks__saigon-bier.webp
           <h2>Maria Saigon</h2>
           <div class="contact-row"><strong>Adresse</strong><span>Grabenstrasse 7, 7000 Chur, Switzerland</span></div>
           <div class="contact-row"><strong>Telefon</strong><a href="tel:+41798590859">+41 79 859 0859</a></div>
-          <div class="contact-row"><strong>E-Mail</strong><a href="mailto:mariasaigon.bistro@gmail.com">mariasaigon.bistro@gmail.com</a></div>
+          <div class="contact-row"><strong>E-Mail</strong><a
+              href="mailto:mariasaigon.bistro@gmail.com">mariasaigon.bistro@gmail.com</a></div>
           <div class="section-actions">
             <a class="btn btn-primary" href="tel:+41798590859">Anrufen</a>
             <a class="btn btn-secondary" href="mailto:mariasaigon.bistro@gmail.com">E-Mail senden</a>
-            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Grabenstrasse%207%2C%207000%20Chur%2C%20Switzerland" target="_blank" rel="noopener">Route öffnen</a>
+            <a class="btn btn-ghost"
+              href="https://www.google.com/maps/search/?api=1&query=Grabenstrasse%207%2C%207000%20Chur%2C%20Switzerland"
+              target="_blank" rel="noopener">Route öffnen</a>
           </div>
         </article>
       </div>
@@ -659,7 +1175,8 @@ assets/images/menu/softdrinks__saigon-bier.webp
     Bestellung ansehen <span class="cart-count" id="cartCount">0</span>
   </button>
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
-  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true">
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle"
+    aria-hidden="true">
     <div class="drawer-head">
       <h2 id="cartTitle">Ihre Bestellung</h2>
       <button class="btn btn-ghost" id="cartClose" type="button">Schließen</button>
@@ -725,8 +1242,6 @@ assets/images/menu/softdrinks__saigon-bier.webp
       { type: "speisen", category: "vorspeisen", categoryLabel: "Vorspeisen", name: "Goi Cuon Tom / Bo", description: "Sommerrollen mit Rindfleisch oder Crevetten, 2 Stück.", price: 8.50, slug: "goi-cuon-tom-bo" },
       { type: "speisen", category: "vorspeisen", categoryLabel: "Vorspeisen", name: "Cha Gio", description: "Vietnamesische Frühlingsrollen, 2 Stück, Schweinefleisch.", price: 5.90, slug: "cha-gio" },
       { type: "speisen", category: "vorspeisen", categoryLabel: "Vorspeisen", name: "Hoanh Thanh Chien", description: "Gebratene Wantan, 5 Stück.", price: 10.50, slug: "hoanh-thanh-chien" },
-      { type: "speisen", category: "extra", categoryLabel: "Extra", name: "Fleisch", description: "Extra Fleisch.", price: 6.00, slug: "fleisch" },
-      { type: "speisen", category: "extra", categoryLabel: "Extra", name: "Portion Nudeln", description: "Extra Portion Nudeln.", price: 6.00, slug: "portion-nudeln" },
       { type: "getraenke", category: "kaffee", categoryLabel: "Kaffee", name: "Cà Phê Sữa Đá", description: "Vietnamesischer Eiskaffee mit Kondensmilch.", price: 6.80, slug: "ca-phe-sua-da" },
       { type: "getraenke", category: "kaffee", categoryLabel: "Kaffee", name: "Cà Phê Trứng", description: "Vietnamesischer Eiskaffee.", price: 8.50, slug: "ca-phe-trung" },
       { type: "getraenke", category: "kaffee", categoryLabel: "Kaffee", name: "Cà phê Muối", description: "Kaffee mit gesüßter Kondensmilch und cremiger, leicht gesalzener Sahnehaube.", price: 8.00, slug: "ca-phe-muoi" },
@@ -791,7 +1306,7 @@ assets/images/menu/softdrinks__saigon-bier.webp
         return;
       }
       grid.innerHTML = items.map(item => `
-        <article class="menu-card">
+        <article class="menu-card menu-card--${item.type}">
           <div class="menu-img-wrap">
             <img src="${item.image}" alt="${escapeHtml(item.name)}" loading="lazy" decoding="async" onerror="handleImageError(this, false)">
           </div>
@@ -983,4 +1498,5 @@ assets/images/menu/softdrinks__saigon-bier.webp
     renderCart();
   </script>
 </body>
+
 </html>
