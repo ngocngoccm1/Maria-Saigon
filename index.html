@@ -9,32 +9,51 @@
   <title>Maria Saigon - Vietnamese Bistro</title>
   <style>
     :root {
-      --font-family-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      --font-size-xs: 12px;
-      --font-size-sm: 14px;
-      --font-size-md: 16px;
+      --font-family-primary: Inter, sans-serif;
+      --font-size-xs: 13px;
+      --font-size-sm: 16px;
+      --font-size-md: 17px;
       --font-size-base: 16px;
       --font-weight-base: 400;
-      --line-height-base: 24px;
-      --color-text-primary: #545454;
-      --color-text-secondary: #0000ee;
+      --line-height-base: 25.6px;
+      --color-text-primary: #4f5552;
+      --color-text-secondary: #547267;
       --color-text-tertiary: #ffffff;
-      --color-surface-base: #000000;
-      --color-surface-muted: #82b440;
-      --color-brand-primary: #82b440;
-      --color-brand-dark: #4f6f28;
-      --color-brand-soft: #eef7e8;
-      --color-bg: #ffffff;
+      --color-text-inverse: #405f1c;
+      --color-surface-base: #1f332b;
+      --color-surface-muted: #ffffff;
+      --color-surface-raised: #111111;
+      --color-surface-strong: #fcfbf8;
+      --color-brand-primary: #9fc8b8;
+      --color-brand-dark: #48695d;
+      --color-brand-soft: #eef5f0;
+      --color-brand-cream: #f7f1e7;
+      --color-brand-cream-deep: #efe4d2;
+      --color-brand-brown: #3a2a24;
+      --color-bg: #fbfaf7;
       --color-card: #ffffff;
-      --color-border: rgba(84, 84, 84, 0.16);
-      --space-1: 5px;
-      --space-2: 20px;
+      --color-border: rgba(72, 105, 93, 0.16);
+      --space-1: 7px;
+      --space-2: 8px;
+      --space-3: 9px;
+      --space-4: 10px;
+      --space-5: 12px;
+      --space-6: 14px;
+      --space-7: 16px;
+      --space-8: 17px;
       --radius-xs: 4px;
-      --radius-md: 16px;
+      --radius-sm: 16px;
+      --radius-md: 18px;
       --radius-lg: 28px;
-      --shadow-1: rgb(111, 154, 55) 0px 2px 0px 0px;
-      --shadow-card: 0 16px 40px rgba(79, 111, 40, 0.12);
+      --radius-xl: 50px;
+      --radius-2xl: 999px;
+      --shadow-1: rgba(58, 42, 36, 0.28) 0px 8px 22px -12px;
+      --shadow-2: rgba(58, 42, 36, 0.06) 0px 8px 24px 0px;
+      --shadow-3: rgba(64, 95, 28, 0.1) 0px 18px 40px 0px;
+      --shadow-4: rgba(58, 42, 36, 0.08) 0px 14px 36px 0px;
+      --shadow-card: 0 20px 48px rgba(58, 42, 36, 0.10);
       --motion-duration-instant: 200ms;
+      --motion-duration-fast: 300ms;
       --container: 1180px;
     }
 
@@ -78,7 +97,7 @@
     }
 
     :focus-visible {
-      outline: 3px solid var(--color-brand-primary);
+      outline: 3px solid var(--color-brand-dark);
       outline-offset: 3px;
     }
 
@@ -106,7 +125,7 @@
     .btn {
       min-height: 44px;
       border: 1px solid transparent;
-      border-radius: 999px;
+      border-radius: var(--radius-2xl);
       padding: 10px 18px;
       display: inline-flex;
       align-items: center;
@@ -114,7 +133,7 @@
       gap: 8px;
       font-weight: 700;
       cursor: pointer;
-      transition: transform var(--motion-duration-instant), background var(--motion-duration-instant), border-color var(--motion-duration-instant), color var(--motion-duration-instant);
+      transition: transform var(--motion-duration-instant), background var(--motion-duration-fast), border-color var(--motion-duration-fast), color var(--motion-duration-fast), box-shadow var(--motion-duration-fast);
     }
 
     .btn:hover {
@@ -133,47 +152,49 @@
     }
 
     .btn-primary {
-      background: var(--color-brand-dark);
-      color: var(--color-text-tertiary);
+      background: var(--color-brand-brown);
+      color: var(--color-surface-strong);
       box-shadow: var(--shadow-1);
     }
 
     .btn-primary:hover {
-      background: #3f5a20;
+      background: var(--color-surface-base);
     }
 
     .btn-secondary {
-      background: var(--color-brand-soft);
+      background: var(--color-surface-muted);
       color: var(--color-brand-dark);
-      border-color: rgba(79, 111, 40, 0.18);
+      border-color: rgba(117, 102, 87, 0.28);
     }
 
     .btn-secondary:hover {
-      background: #e2f1d8;
+      background: var(--color-surface-strong);
+      border-color: var(--color-brand-dark);
     }
 
     .btn-ghost {
-      background: var(--color-bg);
+      background: var(--color-surface-muted);
       color: var(--color-brand-dark);
       border-color: var(--color-border);
     }
 
     .btn-ghost:hover {
-      border-color: var(--color-brand-primary);
+      border-color: var(--color-brand-dark);
+      background: var(--color-surface-strong);
     }
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 50;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(141, 158, 68, 0.96);
       backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--color-border);
+      border-bottom: 1px solid rgba(252, 251, 248, 0.42);
       transition: box-shadow var(--motion-duration-instant);
     }
 
     .site-header.is-scrolled {
-      box-shadow: 0 10px 24px rgba(79, 111, 40, 0.10);
+      box-shadow: 0 10px 24px rgba(17, 17, 17, 0.18);
     }
 
     .nav-wrap {
@@ -201,44 +222,136 @@
 
     .brand strong {
       display: block;
-      color: var(--color-surface-base);
-      font-size: 19px;
+      color: var(--color-surface-strong);
+      font-size: 18px;
       line-height: 20px;
     }
 
     .brand span {
       display: block;
       font-size: var(--font-size-xs);
-      color: var(--color-brand-dark);
+      color: rgba(252, 251, 248, 0.92);
       line-height: 16px;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
     }
 
     .nav-links a {
       min-height: 44px;
       display: inline-flex;
       align-items: center;
-      padding: 8px 12px;
+      padding: 8px 14px;
       border-radius: 999px;
-      color: #2f3f23;
+      color: var(--color-surface-strong);
       font-weight: 700;
-      font-size: var(--font-size-sm);
+      font-size: 14px;
+      transition: background var(--motion-duration-instant), color var(--motion-duration-instant);
     }
 
     .nav-links a:hover,
     .nav-links a:active {
-      background: var(--color-brand-soft);
+      background: rgba(252, 251, 248, 0.12);
+      color: #fff5da;
     }
 
     .nav-actions {
       display: flex;
       align-items: center;
       gap: 10px;
+      position: relative;
+    }
+
+    .nav-search {
+      width: 44px;
+      min-width: 44px;
+      padding: 0;
+    }
+
+    .nav-search svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .site-header .nav-search,
+    .site-header .menu-toggle {
+      color: var(--color-surface-strong);
+      background: transparent;
+      border-color: rgba(252, 251, 248, 0.28);
+    }
+
+    .site-header .nav-search:hover,
+    .site-header .nav-search[aria-expanded="true"] {
+      background: rgba(252, 251, 248, 0.14);
+      border-color: rgba(252, 251, 248, 0.54);
+      color: #fff6dc;
+    }
+
+    .nav-search-panel {
+      position: absolute;
+      top: calc(100% + 12px);
+      right: 56px;
+      width: min(360px, calc(100vw - 32px));
+      padding: 16px;
+      border-radius: 22px;
+      background: rgba(255, 252, 246, 0.98);
+      border: 1px solid rgba(141, 158, 68, 0.18);
+      box-shadow: 0 18px 40px rgba(58, 42, 36, 0.16);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-8px);
+      transition: opacity var(--motion-duration-instant), transform var(--motion-duration-instant);
+      z-index: 55;
+    }
+
+    .nav-search-panel.is-open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .nav-search-panel label {
+      display: block;
+      margin-bottom: 10px;
+      color: #4b4035;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .nav-search-panel .search-input {
+      min-height: 52px;
+      padding-right: 52px;
+      background: #fffdf8;
+    }
+
+    .nav-search-form {
+      position: relative;
+    }
+
+    .nav-search-submit {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      min-height: 38px;
+      padding: 0;
+      border-radius: 50%;
+      background: #7d8f4e;
+      color: #fff;
+      border-color: #7d8f4e;
+      box-shadow: none;
+    }
+
+    .nav-search-hint {
+      margin: 10px 0 0;
+      color: #7f705f;
+      font-size: 13px;
+      line-height: 1.45;
     }
 
     .menu-toggle {
@@ -269,30 +382,74 @@
     }
 
     .hero {
+      position: relative;
       background:
-        radial-gradient(circle at 78% 18%, rgba(130, 180, 64, 0.22), transparent 30%),
-        linear-gradient(135deg, #ffffff 0%, #f5fbf0 52%, #e8f4df 100%);
-      padding: 84px 0 60px;
+        linear-gradient(90deg, rgba(22, 14, 10, 0.78) 0%, rgba(22, 14, 10, 0.48) 28%, rgba(22, 14, 10, 0.16) 56%, rgba(22, 14, 10, 0.34) 100%),
+        url("assets/images/hero/pho-hero-reference.png") center center / cover no-repeat;
+      padding: 70px 0 68px;
+      min-height: 690px;
+      display: flex;
+      align-items: center;
     }
 
     .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
-      gap: clamp(28px, 5vw, 72px);
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .hero-copy {
+      max-width: 610px;
+      margin-right: auto;
+      padding-left: 20px;
+    }
+
+    .hero-announcement {
+      display: inline-flex;
       align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: rgba(80, 56, 34, 0.58);
+      color: #f8efe1;
+      border: 1px solid rgba(224, 175, 72, 0.82);
+      box-shadow: 0 14px 28px rgba(31, 16, 8, 0.24);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-announcement::before {
+      content: none;
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       border-radius: 999px;
-      color: var(--color-brand-dark);
-      background: #ffffff;
-      border: 1px solid rgba(79, 111, 40, 0.18);
-      padding: 8px 12px;
-      font-size: var(--font-size-sm);
+      color: #fbefcd;
+      background: rgba(35, 19, 11, 0.78);
+      border: 1px solid rgba(255, 214, 130, 0.24);
+      padding: 10px 16px;
+      font-size: 11px;
       font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      box-shadow: 0 10px 24px rgba(21, 9, 4, 0.22);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eyebrow::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.26), transparent 32%, transparent 68%, rgba(255, 255, 255, 0.18));
+      pointer-events: none;
     }
 
     .eyebrow::before {
@@ -300,8 +457,8 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--color-brand-primary);
-      box-shadow: 0 0 0 5px rgba(130, 180, 64, 0.16);
+      background: #e3b85e;
+      box-shadow: 0 0 0 5px rgba(227, 184, 94, 0.12);
     }
 
     h1,
@@ -312,18 +469,22 @@
     }
 
     h1 {
-      margin: 22px 0 18px;
-      color: var(--color-surface-base);
-      font-size: clamp(40px, 7vw, 78px);
-      line-height: 0.98;
+      margin: 14px 0 18px;
+      color: #ffffff;
+      font-size: clamp(50px, 7vw, 76px);
+      line-height: 0.9;
       letter-spacing: 0;
-      max-width: 760px;
+      max-width: 620px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      text-shadow: 0 8px 24px rgba(12, 7, 4, 0.24);
     }
 
     .hero p {
-      font-size: clamp(17px, 2vw, 21px);
-      line-height: 1.55;
-      max-width: 660px;
+      font-size: 16px;
+      line-height: 1.62;
+      max-width: 540px;
+      color: rgba(255, 255, 255, 0.9);
     }
 
     .hero-actions,
@@ -335,37 +496,37 @@
     }
 
     .hero-card {
-      min-height: 440px;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      background: linear-gradient(145deg, #dcefd0, #ffffff 48%, #9fc96a);
-      border: 1px solid rgba(79, 111, 40, 0.18);
-      box-shadow: var(--shadow-card);
-      position: relative;
-      isolation: isolate;
+      display: none;
     }
 
-    .hero-card img {
-      width: 100%;
-      height: 100%;
-      min-height: 440px;
-      object-fit: cover;
+    .hero-signature {
+      display: block;
+      margin: 16px 0 10px;
+      color: #d7a84a;
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: clamp(34px, 4.5vw, 48px);
+      line-height: 1;
     }
 
-    .hero-card::after {
-      content: "Pho  Reisgerichte  Kaffee";
-      position: absolute;
-      left: 20px;
-      right: 20px;
-      bottom: 20px;
-      color: var(--color-text-tertiary);
-      background: rgba(0, 0, 0, 0.46);
-      border: 1px solid rgba(255, 255, 255, 0.22);
-      border-radius: 999px;
-      padding: 12px 16px;
-      font-weight: 800;
-      text-align: center;
-      backdrop-filter: blur(8px);
+    .hero-actions .btn-primary {
+      background: #d7a84a;
+      color: #2a1a12;
+      border-color: #d7a84a;
+      box-shadow: none;
+    }
+
+    .hero-actions .btn-primary:hover {
+      background: #e3ba63;
+    }
+
+    .hero-actions .btn-ghost {
+      background: rgba(24, 16, 12, 0.68);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .hero-actions .btn-ghost:hover {
+      background: rgba(24, 16, 12, 0.82);
     }
 
     section {
@@ -381,14 +542,16 @@
     }
 
     .section-kicker {
-      color: var(--color-brand-dark);
+      color: var(--color-text-tertiary);
       font-weight: 800;
       font-size: var(--font-size-sm);
       margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
     }
 
     h2 {
-      color: var(--color-surface-base);
+      color: #3a2a24;
       font-size: clamp(30px, 4vw, 48px);
       line-height: 1.05;
       margin-bottom: 12px;
@@ -403,7 +566,7 @@
     }
 
     .opening {
-      background: var(--color-brand-soft);
+      background: linear-gradient(180deg, rgba(238, 245, 240, 0.7), rgba(247, 241, 231, 0.56));
     }
 
     .opening-panel {
@@ -412,56 +575,139 @@
       gap: 28px;
       align-items: center;
       background: var(--color-card);
-      border: 1px solid rgba(79, 111, 40, 0.16);
+      border: 1px solid rgba(72, 105, 93, 0.14);
       border-radius: var(--radius-lg);
       padding: clamp(24px, 4vw, 44px);
       box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
     }
 
-    .opening-date {
-      min-height: 190px;
-      border-radius: var(--radius-md);
-      background: linear-gradient(145deg, var(--color-brand-dark), var(--color-brand-primary));
-      color: var(--color-text-tertiary);
+    .opening-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top right, rgba(215, 168, 74, 0.18), transparent 32%),
+        linear-gradient(90deg, rgba(125, 143, 78, 0.08), transparent 45%);
+      pointer-events: none;
+    }
+
+    .opening-panel h2 {
+      display: inline-block;
+      color: #6b411f;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.54);
+    }
+
+    .menu-section {
+      background: #f7f3ec;
+      padding-top: 96px;
+      padding-bottom: 88px;
+    }
+
+    .menu-intro {
+      text-align: center;
+      max-width: 1120px;
+      margin: 0 auto 42px;
+    }
+
+    .menu-intro .section-kicker {
+      margin-bottom: 18px;
+      color: #d5672a;
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      font-size: clamp(34px, 4vw, 48px);
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      line-height: 1;
+    }
+
+    .menu-intro h2 {
+      margin-bottom: 18px;
+      color: #111111;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(42px, 6.3vw, 68px);
+      line-height: 1.08;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    .menu-intro>p:last-child {
+      margin: 0 auto;
+      max-width: 760px;
+      color: #8b6847;
+      font-size: clamp(21px, 2.1vw, 26px);
+      line-height: 1.55;
+    }
+
+    .menu-divider {
+      width: 196px;
+      height: 18px;
+      margin: 28px auto 0;
+      position: relative;
+    }
+
+    .menu-divider::before,
+    .menu-divider::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 42%;
+      height: 1px;
+      background: rgba(139, 104, 71, 0.28);
+    }
+
+    .menu-divider::before {
+      left: 0;
+    }
+
+    .menu-divider::after {
+      right: 0;
+    }
+
+    .menu-divider span {
+      position: absolute;
+      inset: 0;
       display: grid;
       place-items: center;
-      text-align: center;
-      padding: 22px;
-      font-size: 30px;
-      line-height: 1.1;
-      font-weight: 900;
+      color: #8d9e44;
+      font-size: 18px;
     }
 
     .menu-tools {
-      display: grid;
-      gap: 16px;
-      margin-bottom: 26px;
+      margin-bottom: 34px;
     }
 
     .tabs {
       display: flex;
-      gap: 8px;
+      gap: 10px;
+      flex-wrap: wrap;
       overflow-x: auto;
-      padding-bottom: 6px;
+      padding: 0 0 6px;
       scrollbar-width: thin;
+      justify-content: center;
+      width: 100%;
     }
 
     .tab {
       flex: 0 0 auto;
-      min-height: 44px;
-      border: 1px solid var(--color-border);
+      min-height: 46px;
+      border: 1px solid rgba(213, 193, 169, 0.92);
       border-radius: 999px;
-      background: var(--color-card);
-      color: var(--color-brand-dark);
-      font-weight: 800;
-      padding: 9px 14px;
+      background: rgba(255, 255, 255, 0.86);
+      color: #8a6a45;
+      font-weight: 500;
+      font-size: 18px;
+      padding: 10px 24px;
       cursor: pointer;
-      transition: background var(--motion-duration-instant), border-color var(--motion-duration-instant), transform var(--motion-duration-instant);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+      transition: background var(--motion-duration-instant), border-color var(--motion-duration-instant), color var(--motion-duration-instant), transform var(--motion-duration-instant);
     }
 
     .tab:hover {
-      border-color: var(--color-brand-primary);
-      background: var(--color-brand-soft);
+      border-color: rgba(141, 158, 68, 0.46);
+      color: #556a2e;
+      background: #ffffff;
     }
 
     .tab:active {
@@ -469,9 +715,10 @@
     }
 
     .tab[aria-pressed="true"] {
-      background: var(--color-brand-dark);
-      color: var(--color-text-tertiary);
-      border-color: var(--color-brand-dark);
+      background: #7d8f4e;
+      color: #ffffff;
+      border-color: #7d8f4e;
+      box-shadow: 0 8px 20px rgba(125, 143, 78, 0.24);
     }
 
     .search-row label {
@@ -487,9 +734,9 @@
       width: 100%;
       min-height: 48px;
       border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
+      border-radius: 18px;
       padding: 12px 14px;
-      background: var(--color-card);
+      background: #f6f6f3;
       color: var(--color-surface-base);
       transition: border-color var(--motion-duration-instant), box-shadow var(--motion-duration-instant);
     }
@@ -497,7 +744,7 @@
     .search-input:hover,
     .field input:hover,
     .field textarea:hover {
-      border-color: rgba(79, 111, 40, 0.40);
+      border-color: rgba(72, 105, 93, 0.4);
     }
 
     .field.is-error input,
@@ -528,7 +775,7 @@
       border-radius: var(--radius-md);
       background: var(--color-card);
       overflow: hidden;
-      box-shadow: 0 8px 24px rgba(79, 111, 40, 0.06);
+      box-shadow: 0 8px 24px rgba(58, 42, 36, 0.06);
       transition: transform var(--motion-duration-instant), box-shadow var(--motion-duration-instant), border-color var(--motion-duration-instant);
       display: flex;
       flex-direction: column;
@@ -538,12 +785,12 @@
     .menu-card:hover {
       transform: translateY(-3px);
       box-shadow: var(--shadow-card);
-      border-color: rgba(130, 180, 64, 0.40);
+      border-color: rgba(159, 200, 184, 0.44);
     }
 
     .menu-img-wrap {
       aspect-ratio: 4 / 3;
-      background: linear-gradient(135deg, #eef7e8, #ffffff 48%, #cfe6b9);
+      background: linear-gradient(135deg, #eef5f0, #ffffff 48%, #d9e7df);
       overflow: hidden;
     }
 
@@ -574,7 +821,7 @@
     .category-label {
       align-self: flex-start;
       border-radius: 999px;
-      background: var(--color-brand-soft);
+      background: #f1f6f2;
       color: var(--color-brand-dark);
       padding: 4px 9px;
       font-size: var(--font-size-xs);
@@ -617,85 +864,264 @@
       grid-column: 1 / -1;
       border: 1px dashed rgba(79, 111, 40, 0.34);
       border-radius: var(--radius-md);
-      background: var(--color-brand-soft);
+      background: #f3f6f4;
       padding: 28px;
       text-align: center;
       color: var(--color-brand-dark);
       font-weight: 800;
     }
 
-    .hours-contact {
-      background: linear-gradient(180deg, #ffffff, #f8fcf5);
+    .about-section {
+      background: linear-gradient(180deg, #fbfaf7, #f4f8f5);
     }
 
-    .info-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 22px;
-    }
-
-    .info-card {
-      background: var(--color-card);
-      border: 1px solid var(--color-border);
+    .about-card {
+      position: relative;
+      isolation: isolate;
+      background:
+        linear-gradient(135deg, rgba(250, 253, 248, 0.78), rgba(243, 251, 239, 0.72)),
+        url("assets/images/about-background-green.png") center center / cover no-repeat;
+      border: 1px solid rgba(255, 255, 255, 0.5);
       border-radius: var(--radius-lg);
-      padding: clamp(22px, 3vw, 34px);
-      box-shadow: 0 10px 28px rgba(79, 111, 40, 0.08);
+      padding: clamp(34px, 5vw, 58px);
+      box-shadow: 0 26px 60px rgba(27, 54, 28, 0.18);
+      max-width: 980px;
+      margin: 0 auto;
+      overflow: hidden;
     }
 
-    .hours-row,
-    .contact-row {
+    .about-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(14px);
+      background: rgba(255, 255, 255, 0.08);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .about-card p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #2c4f37;
+      max-width: 820px;
+    }
+
+    .about-card h2 {
+      color: #16361f;
+      font-size: clamp(34px, 4.3vw, 54px);
+      margin-bottom: 18px;
+    }
+
+    .about-card .section-kicker {
+      color: #6b924a;
+    }
+
+    .guest-testimonials {
+      background: #f6f0e5;
+    }
+
+    .guest-testimonials .container {
+      max-width: 1240px;
+    }
+
+    .testimonial-head {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 42px;
+    }
+
+    .testimonial-head .section-kicker {
+      color: #c15d2a;
+      font-size: 18px;
+      letter-spacing: 0.02em;
+      text-transform: none;
+    }
+
+    .testimonial-head h2 {
+      font-size: clamp(40px, 5vw, 64px);
+      margin-bottom: 14px;
+    }
+
+    .guest-review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .guest-review-card {
+      background: rgba(255, 255, 255, 0.76);
+      border: 1px solid rgba(96, 79, 59, 0.08);
+      border-radius: 28px;
+      padding: 28px 26px;
+      box-shadow: 0 18px 42px rgba(84, 58, 33, 0.08);
+      backdrop-filter: blur(6px);
+    }
+
+    .guest-review-top {
       display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--color-border);
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
     }
 
-    .hours-row:last-child,
-    .contact-row:last-of-type {
-      border-bottom: 0;
+    .guest-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      color: #fff;
+      font-weight: 800;
+      background: linear-gradient(135deg, #c46431, #70523d);
     }
 
-    .hours-row strong,
-    .contact-row strong {
-      color: var(--color-surface-base);
-    }
-
-    .contact-row {
-      flex-direction: column;
+    .guest-review-name {
+      display: grid;
       gap: 4px;
     }
 
-    .contact-row a {
-      color: var(--color-brand-dark);
-      font-weight: 800;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
+    .guest-review-name strong {
+      color: #181512;
+      font-size: 18px;
     }
 
-    .footer {
-      background: var(--color-brand-dark);
-      color: rgba(255, 255, 255, 0.84);
-      padding: 38px 0;
+    .guest-review-name span {
+      color: #866a58;
+      font-size: 14px;
     }
 
-    .footer-grid {
+    .guest-stars {
+      color: #f39b32;
+      font-size: 16px;
+      letter-spacing: 0.16em;
+      margin-bottom: 14px;
+    }
+
+    .guest-review-card blockquote {
+      margin: 0;
+      color: #5e5348;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .guest-trust {
+      background: #121618;
+      color: #fff8f0;
+      padding: 0;
+    }
+
+    .guest-trust-grid {
       display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 24px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .guest-trust-card {
+      min-height: 360px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      display: flex;
+      align-items: flex-end;
+      padding: 34px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .guest-trust-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(18, 22, 24, 0.12), rgba(18, 22, 24, 0.84));
+      z-index: -1;
+    }
+
+    .guest-trust-card h3 {
+      color: #fff;
+      font-size: clamp(28px, 3.5vw, 42px);
+      margin: 0;
+      max-width: 250px;
+    }
+
+    .site-footer {
+      background: #34231e;
+      color: rgba(255, 245, 236, 0.84);
+      padding: 56px 0 20px;
+    }
+
+    .site-footer a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-footer-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr 0.85fr;
+      gap: 32px;
       align-items: start;
     }
 
-    .footer strong {
-      color: var(--color-text-tertiary);
-      display: block;
-      margin-bottom: 6px;
+    .site-footer-brand,
+    .site-footer-hours,
+    .site-footer-social {
+      display: grid;
+      gap: 14px;
     }
 
-    .footer a {
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    .site-footer-brand-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .site-footer-logo {
+      width: 76px;
+      height: 58px;
+      object-fit: contain;
+      border-radius: 0;
+      flex: 0 0 auto;
+    }
+
+    .site-footer-title {
+      display: grid;
+      gap: 4px;
+    }
+
+    .site-footer-title strong,
+    .site-footer-hours strong,
+    .site-footer-social strong {
+      color: #fff;
+      font-size: 19px;
+    }
+
+    .site-footer-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .site-footer-social .footer-icons {
+      margin-top: 2px;
+    }
+
+    .footer-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 244, 232, 0.14);
+      display: inline-grid;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .site-footer-bottom {
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 244, 232, 0.12);
+      text-align: center;
+      color: rgba(255, 245, 236, 0.64);
+      font-size: var(--font-size-sm);
     }
 
     .cart-fab {
@@ -703,15 +1129,21 @@
       right: 18px;
       bottom: 18px;
       z-index: 45;
-      box-shadow: 0 14px 34px rgba(79, 111, 40, 0.24);
+      min-height: 58px;
+      padding: 12px 18px 12px 20px;
+      border-radius: 999px;
+      background: #e04b21;
+      border-color: #e04b21;
+      color: #fff;
+      box-shadow: 0 18px 34px rgba(62, 23, 12, 0.3);
     }
 
     .cart-count {
-      min-width: 26px;
-      height: 26px;
+      min-width: 24px;
+      height: 24px;
       border-radius: 999px;
-      background: #ffffff;
-      color: var(--color-brand-dark);
+      background: #1d1d1d;
+      color: #fff;
       display: inline-grid;
       place-items: center;
       font-size: var(--font-size-xs);
@@ -886,8 +1318,8 @@
       .nav-links {
         position: fixed;
         inset: 76px 16px auto 16px;
-        background: var(--color-card);
-        border: 1px solid var(--color-border);
+        background: rgba(141, 158, 68, 0.98);
+        border: 1px solid rgba(252, 251, 248, 0.22);
         border-radius: var(--radius-md);
         box-shadow: var(--shadow-card);
         padding: 10px;
@@ -902,6 +1334,7 @@
 
       .nav-links a {
         justify-content: center;
+        color: var(--color-surface-strong);
       }
 
       .menu-toggle {
@@ -912,19 +1345,26 @@
         display: none;
       }
 
+      .nav-search-panel {
+        right: 0;
+      }
+
       .hero-grid,
-      .opening-panel,
-      .info-grid {
+      .guest-review-grid,
+      .guest-trust-grid,
+      .site-footer-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding-top: 52px;
+      .opening-panel {
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
 
-      .hero-card,
-      .hero-card img {
-        min-height: 330px;
+      .hero {
+        min-height: 560px;
+        padding-top: 72px;
+        background-position: 62% center;
       }
 
       .menu-grid {
@@ -935,8 +1375,8 @@
         display: block;
       }
 
-      .footer-grid {
-        grid-template-columns: 1fr;
+      .guest-trust-card {
+        min-height: 280px;
       }
     }
 
@@ -966,12 +1406,61 @@
         display: none;
       }
 
+      .nav-search {
+        display: inline-flex;
+      }
+
       section {
         padding: 54px 0;
       }
 
       h1 {
-        font-size: clamp(38px, 13vw, 54px);
+        font-size: clamp(38px, 12vw, 56px);
+        max-width: 100%;
+      }
+
+      .hero {
+        min-height: 520px;
+        padding: 46px 0 48px;
+        background-position: 66% center;
+      }
+
+      .hero-grid {
+        max-width: 100%;
+        display: block;
+      }
+
+      .hero-copy {
+        padding-left: 0;
+      }
+
+      .hero-announcement {
+        font-size: 11px;
+        padding: 9px 14px;
+      }
+
+      .hero-signature {
+        font-size: 30px;
+      }
+
+      .eyebrow {
+        font-size: 10px;
+        padding: 8px 12px;
+      }
+
+      .opening-panel {
+        padding: 24px 20px;
+      }
+
+      .opening p {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.72;
+        overflow-wrap: anywhere;
+      }
+
+      .hero p {
+        font-size: 14px;
       }
 
       .hero-actions,
@@ -998,9 +1487,44 @@
         width: 100%;
       }
 
-      .hours-row {
-        flex-direction: column;
-        gap: 2px;
+      .menu-intro,
+      .testimonial-head {
+        margin-bottom: 22px;
+      }
+
+      .tabs {
+        justify-content: flex-start;
+        gap: 8px;
+      }
+
+      .tab {
+        font-size: 16px;
+        padding: 9px 20px;
+      }
+
+      .menu-intro .section-kicker {
+        font-size: 34px;
+      }
+
+      .menu-intro h2 {
+        font-size: clamp(34px, 10vw, 46px);
+      }
+
+      .menu-intro>p:last-child {
+        font-size: 18px;
+      }
+
+      .menu-divider {
+        margin-top: 22px;
+      }
+
+      .about-card p {
+        font-size: 17px;
+      }
+
+      .guest-review-card,
+      .guest-trust-card {
+        border-radius: 24px;
       }
 
       .cart-fab {
@@ -1008,6 +1532,11 @@
         right: 12px;
         bottom: 12px;
         width: calc(100% - 24px);
+      }
+
+      .nav-search-panel {
+        width: min(100vw - 24px, 340px);
+        top: calc(100% + 10px);
       }
     }
 
@@ -1034,16 +1563,37 @@
         <span><strong>Maria Saigon</strong><span>Vietnamese Bistro</span></span>
       </a>
       <nav class="nav-links" id="navLinks" aria-label="Hauptnavigation">
-        <a href="#start">Startseite</a>
-        <a href="#menu">Menü</a>
-        <a href="#getraenke">Getränke</a>
-        <a href="#oeffnungszeiten">Öffnungszeiten</a>
+        <a href="#start">Home</a>
+        <a href="#menu">Men&uuml;</a>
+        <a href="#getraenke">Getr&auml;nke</a>
+        <a href="#online-bestellen">Online Bestellen</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
       <div class="nav-actions">
         <a class="btn btn-primary" href="tel:+41798590859">Jetzt anrufen</a>
-        <a class="btn btn-secondary" href="#menu">Menü ansehen</a>
-        <button class="btn btn-ghost menu-toggle" id="menuToggle" type="button" aria-label="Navigation öffnen"
+        <button class="btn btn-secondary" id="navOrderButton" type="button">Online Bestellen</button>
+        <button class="btn btn-ghost nav-search" id="navSearchButton" type="button" aria-label="Suche"
+          aria-expanded="false" aria-controls="navSearchPanel">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"></circle>
+            <path d="M16 16L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <div class="nav-search-panel" id="navSearchPanel" hidden>
+          <label for="menuSearch">Suche in der Speisekarte</label>
+          <form class="nav-search-form" id="navSearchForm">
+            <input class="search-input" id="menuSearch" name="menuSearch" type="search"
+              placeholder="Gericht oder Getr&auml;nk suchen" autocomplete="off">
+            <button class="btn nav-search-submit" type="submit" aria-label="Suche starten">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+                <circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.8"></circle>
+                <path d="M16 16L21 21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+              </svg>
+            </button>
+          </form>
+          <p class="nav-search-hint">Die Ergebnisse werden direkt in der Speisekarte gefiltert.</p>
+        </div>
+        <button class="btn btn-ghost menu-toggle" id="menuToggle" type="button" aria-label="Navigation &ouml;ffnen"
           aria-controls="navLinks" aria-expanded="false">
           <span class="hamburger" aria-hidden="true"></span>
         </button>
@@ -1054,30 +1604,27 @@
   <main id="main">
     <section class="hero" id="start">
       <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">Eröffnung März 2027</span>
-          <h1>Authentische vietnamesische Küche im Herzen von Chur</h1>
-          <p>Frische Pho, Reisgerichte, Nudeln, hausgemachte Getränke und vietnamesische Klassiker - bald bei Maria
-            Saigon Vietnamese Bistro.</p>
+        <div class="hero-copy">
+          <span class="hero-announcement">NEU IN CHUR &ndash; DER GESCHMACK SAIGONS</span>
+          <span class="hero-signature">Ein Hauch von Heimat</span>
+          <h1>Maria Saigon<br>Vietnamesische PHO<br>&amp; BANH MI</h1>
+          <p>Eine 12 Stunden lang gekochte Brühe, weiche Reisnudeln und sorgfältig ausgewähltes frisches Rindfleisch –
+            erleben Sie den Geschmack Saigons direkt hier in der Schweiz.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#menu">Menü entdecken</a>
-            <a class="btn btn-ghost" href="#kontakt">Kontakt aufnehmen</a>
+            <a class="btn btn-primary" href="#menu">Mittagsmenü</a>
+            <a class="btn btn-ghost" href="#menu">Speisekarte</a>
           </div>
-        </div>
-        <div class="hero-card" aria-label="Vietnamesische Spezialitäten">
-          <img src="assets/images/hero/hero-vietnamese-food.webp" alt="Vietnamesische Speisen bei Maria Saigon"
-            loading="eager" decoding="async" onerror="handleImageError(this, true)">
         </div>
       </div>
     </section>
-
     <section class="opening" id="eroeffnung">
       <div class="container opening-panel">
         <div>
           <p class="section-kicker">Bald in Chur</p>
-          <h2>Große Eröffnung im März 2027</h2>
-          <p>Wir freuen uns darauf, Sie bald bei Maria Saigon Vietnamese Bistro in Chur begrüßen zu dürfen. Erleben Sie
-            vietnamesische Küche mit frischen Zutaten, aromatischen Brühen und hausgemachten Getränken.</p>
+          <h2>Grosse Er&ouml;ffnung im Sommer 2027</h2>
+          <p>Wir freuen uns darauf, Sie bald bei Maria Saigon Vietnamese Bistro in Chur begr&uuml;&szlig;en zu
+            d&uuml;rfen. Erleben Sie vietnamesische K&uuml;che mit frischen Zutaten, aromatischen Br&uuml;hen und
+            hausgemachten Getr&auml;nken.</p>
           <div class="section-actions">
             <a class="btn btn-primary"
               href="https://www.google.com/maps/search/?api=1&query=Grabenstrasse%207%2C%207000%20Chur%2C%20Switzerland"
@@ -1085,94 +1632,154 @@
             <a class="btn btn-secondary" href="tel:+41798590859">Anrufen</a>
           </div>
         </div>
-        <!-- <div class="opening-date">März<br>2027</div>  -->
       </div>
     </section>
-
-    <section id="menu">
+    <section class="menu-section" id="menu">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">Speisen und Getränke</p>
-            <h2>Menü entdecken</h2>
-            <p>Filtern, suchen und Lieblingsgerichte für eine unverbindliche Bestellanfrage auswählen.</p>
-          </div>
+        <div class="menu-intro">
+          <p class="section-kicker">Speisekarte</p>
+          <h2>Die Essenz der vietnamesischen K&uuml;che</h2>
+          <p>Jedes Gericht wird mit frischen und hochwertigen Zutaten zubereitet.</p>
+          <div class="menu-divider" aria-hidden="true"><span>✦</span></div>
         </div>
         <div class="menu-tools">
-          <div class="tabs" id="menuTabs" aria-label="Menü filtern"></div>
-          <div class="search-row">
-            <label for="menuSearch">Suche</label>
-            <input class="search-input" id="menuSearch" type="search" placeholder="Gericht oder Getränk suchen..."
-              autocomplete="off">
-          </div>
+          <div class="tabs" id="menuTabs" aria-label="Men&uuml; filtern"></div>
         </div>
         <div class="menu-grid" id="menuGrid" aria-live="polite"></div>
       </div>
     </section>
-
-    <section class="hours-contact" id="getraenke">
+    <section class="about-section" id="getraenke">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-kicker">Hausgemacht und erfrischend</p>
-            <h2>Getränke bei Maria Saigon</h2>
-            <p>Vietnamesischer Kaffee, Matcha, Eistee, Tee und klassische Softdrinks sind direkt im Menü filterbar.</p>
+        <article class="about-card">
+          <p class="section-kicker">Maria Saigon</p>
+          <h2>Die moderne vietnamesische Bistro-Erfahrung in Chur</h2>
+          <p>Maria Saigon ist das erste moderne vietnamesische Bistro im Herzen von Chur und bietet eine frische
+            Interpretation der traditionellen vietnamesischen K&uuml;che.</p>
+          <p>Wir verbinden hochwertige, gesundheitsbewusste Gerichte mit einer warmen und einladenden Atmosph&auml;re
+            &ndash; f&uuml;r Einheimische ebenso wie f&uuml;r internationale G&auml;ste. Unsere Rezepte bleiben den
+            authentischen Aromen treu und vereinen die f&uuml;nf Grundgeschm&auml;cker der vietnamesischen K&uuml;che:
+            s&uuml;&szlig;, sauer, salzig, bitter und scharf.</p>
+          <p>Ob vor Ort oder als Take-away &ndash; wir m&ouml;chten den echten Geschmack Vietnams in den Alltag bringen.
+          </p>
+          <div class="section-actions">
+            <a class="btn btn-secondary" href="#menu" data-filter-link="getraenke">Getr&auml;nke ansehen</a>
           </div>
-          <a class="btn btn-secondary" href="#menu" data-filter-link="getraenke">Getränke ansehen</a>
-        </div>
+        </article>
       </div>
     </section>
-
-    <section class="hours-contact" id="oeffnungszeiten">
-      <div class="container info-grid">
-        <article class="info-card">
-          <p class="section-kicker">Besuchszeiten</p>
-          <h2>Öffnungszeiten</h2>
-          <div class="hours-row"><strong>Montag - Donnerstag</strong><span>11:30 - 22:00</span></div>
-          <div class="hours-row"><strong>Freitag - Samstag</strong><span>11:30 - 23:00</span></div>
-          <div class="hours-row"><strong>Sonntag</strong><span>11:30 - 22:00</span></div>
-          <p style="margin:18px 0 0;">Wir freuen uns auf Ihren Besuch in Chur.</p>
-        </article>
-        <article class="info-card" id="kontakt">
-          <p class="section-kicker">Kontakt</p>
-          <h2>Maria Saigon</h2>
-          <div class="contact-row"><strong>Adresse</strong><span>Grabenstrasse 7, 7000 Chur, Switzerland</span></div>
-          <div class="contact-row"><strong>Telefon</strong><a href="tel:+41798590859">+41 79 859 0859</a></div>
-          <div class="contact-row"><strong>E-Mail</strong><a
-              href="mailto:mariasaigon.bistro@gmail.com">mariasaigon.bistro@gmail.com</a></div>
-          <div class="section-actions">
-            <a class="btn btn-primary" href="tel:+41798590859">Anrufen</a>
-            <a class="btn btn-secondary" href="mailto:mariasaigon.bistro@gmail.com">E-Mail senden</a>
-            <a class="btn btn-ghost"
-              href="https://www.google.com/maps/search/?api=1&query=Grabenstrasse%207%2C%207000%20Chur%2C%20Switzerland"
-              target="_blank" rel="noopener">Route öffnen</a>
-          </div>
-        </article>
+    <section class="guest-testimonials" id="online-bestellen">
+      <div class="container">
+        <div class="testimonial-head">
+          <p class="section-kicker">Was Kunden sagen</p>
+          <h2>Was Kunden sagen</h2>
+          <p>Entdecken Sie, warum Maria Saigon zu einem beliebten Treffpunkt f&uuml;r authentische vietnamesische
+            K&uuml;che in Chur geworden ist.</p>
+        </div>
+        <div class="guest-review-grid">
+          <article class="guest-review-card">
+            <div class="guest-review-top">
+              <div class="guest-avatar" aria-hidden="true">N</div>
+              <div class="guest-review-name">
+                <strong>Nguy&#7877;n Lan Anh</strong>
+                <span>Treue Kunden</span>
+              </div>
+            </div>
+            <div class="guest-stars" aria-label="5 von 5 Sternen">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>&bdquo;Das Pho hier schmeckt genau wie zu Hause! Die Br&uuml;he ist klar, leicht s&uuml;&szlig;lich
+              und die Nudeln sind weich und zart. Ich komme mindestens zweimal pro Woche hierher zum Essen.&ldquo;
+            </blockquote>
+          </article>
+          <article class="guest-review-card">
+            <div class="guest-review-top">
+              <div class="guest-avatar" aria-hidden="true">M</div>
+              <div class="guest-review-name">
+                <strong>Minh Tu&#7845;n</strong>
+                <span>Treue Kunden</span>
+              </div>
+            </div>
+            <div class="guest-stars" aria-label="5 von 5 Sternen">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>&bdquo;Gem&uuml;tliche Atmosph&auml;re, aufmerksamer Service. Der Rindfleischeintopf mit
+              knusprigem Brot war einfach fantastisch! Sehr empfehlenswert.&ldquo;</blockquote>
+          </article>
+          <article class="guest-review-card">
+            <div class="guest-review-top">
+              <div class="guest-avatar" aria-hidden="true">A</div>
+              <div class="guest-review-name">
+                <strong>Anna M&uuml;ller</strong>
+                <span>Treue Kunden</span>
+              </div>
+            </div>
+            <div class="guest-stars" aria-label="5 von 5 Sternen">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <blockquote>&ldquo;Best Vietnamese food in town! Authentic flavors, generous portions, and lovely staff.
+              Maria Saigon felt like home.&rdquo;</blockquote>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <strong>Maria Saigon - Vietnamese Bistro</strong>
-        <span>Authentische vietnamesische Küche in Chur.</span>
+  <footer class="site-footer" id="kontakt">
+    <div class="container site-footer-grid">
+      <div class="site-footer-brand">
+        <div class="site-footer-brand-head">
+          <img class="site-footer-logo" src="assets/images/brand/logo.webp" alt="" aria-hidden="true">
+          <div class="site-footer-title">
+            <strong>MARIA SAIGON</strong>
+            <span>Vietnamese Kitchen - Bistro in Chur</span>
+          </div>
+        </div>
+        <span>Der Geschmack Vietnams &ndash; mit Liebe gekocht, mit Leidenschaft in Chur serviert.</span>
+        <div class="site-footer-list">
+          <span>Adresse: Bahnhofstrasse 12, 8001 Z&uuml;rich</span>
+          <span>Phone <a href="tel:+41441234567">+41 44 123 45 67</a></span>
+          <span>Email <a href="mailto:mariasaigon.bistro@gmail.com">mariasaigon.bistro@gmail.com</a></span>
+        </div>
       </div>
-      <div>
-        <strong>Adresse</strong>
-        <span>Grabenstrasse 7, 7000 Chur, Switzerland</span>
+      <div class="site-footer-hours">
+        <strong>&Ouml;ffnungszeiten</strong>
+        <div class="site-footer-list">
+          <span>Montag 11:30 - 22:00 Uhr</span>
+          <span>Dienstag 11:30 - 22:00 Uhr</span>
+          <span>Mittwoch Geschlossen</span>
+          <span>Donnerstag 11:30 - 22:00 Uhr</span>
+          <span>Freitag 11:30 - 23:00 Uhr</span>
+          <span>Samstag 11:30 - 23:00 Uhr</span>
+          <span>Sonntag 11:30 - 22:00 Uhr</span>
+        </div>
       </div>
-      <div>
-        <strong>Kontakt</strong>
-        <a href="tel:+41798590859">+41 79 859 0859</a><br>
-        <a href="mailto:mariasaigon.bistro@gmail.com">mariasaigon.bistro@gmail.com</a><br>
-        <span>© 2026 Maria Saigon</span>
+      <div class="site-footer-social">
+        <strong>Soziale Netzwerke</strong>
+        <div class="footer-icons">
+          <a class="footer-icon" href="tel:+41441234567" aria-label="Telefon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
+              <path
+                d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1 .3 2 .4 3 .4.7 0 1.2.5 1.2 1.2V20c0 .7-.5 1.2-1.2 1.2C9.7 21.2 2.8 14.3 2.8 5.8 2.8 5.1 3.3 4.6 4 4.6h3.5c.7 0 1.2.5 1.2 1.2 0 1 .1 2 .4 3 .1.4 0 .9-.3 1.2l-2.2 2.2Z"
+                stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+          <a class="footer-icon" href="mailto:mariasaigon.bistro@gmail.com" aria-label="E-Mail">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
+              <path d="M4 7.5 12 13l8-5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.6"></rect>
+            </svg>
+          </a>
+          <a class="footer-icon"
+            href="https://www.google.com/maps/search/?api=1&query=Bahnhofstrasse%2012%2C%208001%20Z%C3%BCrich%2C%20Switzerland"
+            target="_blank" rel="noopener" aria-label="Adresse">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
+              <path d="M12 21s6-5.6 6-11a6 6 0 1 0-12 0c0 5.4 6 11 6 11Z" stroke="currentColor" stroke-width="1.6"
+                stroke-linejoin="round"></path>
+              <circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.6"></circle>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </footer>
 
   <button class="btn btn-primary cart-fab" id="cartOpen" type="button" aria-haspopup="dialog">
-    Bestellung ansehen <span class="cart-count" id="cartCount">0</span>
+    Online Bestellen <span class="cart-count" id="cartCount">0</span>
   </button>
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
   <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle"
@@ -1270,12 +1877,23 @@
     ].map(item => ({ ...item, id: `${item.category}-${item.slug}`, image: getMenuImage(item.category, item.slug) }));
 
     const filters = [
-      ["alle", "Alle"], ["speisen", "Speisen"], ["getraenke", "Getränke"], ["pho", "Pho"], ["reis", "Reis"], ["nudeln", "Nudeln"], ["vorspeisen", "Vorspeisen"], ["kaffee", "Kaffee"], ["matcha", "Matcha"], ["softdrinks", "Softdrinks"]
+      ["alle", "Alle"],
+      ["mittagsmenu", "Mittagsmenü"],
+      ["vorspeisen", "Vorspeisen"],
+      ["hauptspeisen", "Hauptspeisen"],
+      ["getraenke", "Getränke"],
+      ["bier", "Bier"]
     ];
     const state = { filter: "alle", query: "", cart: new Map() };
     const grid = document.getElementById("menuGrid");
     const tabs = document.getElementById("menuTabs");
     const search = document.getElementById("menuSearch");
+    const navSearchButton = document.getElementById("navSearchButton");
+    const navSearchPanel = document.getElementById("navSearchPanel");
+    const navSearchForm = document.getElementById("navSearchForm");
+    const navOrderButton = document.getElementById("navOrderButton");
+    const sectionOrderButton = document.getElementById("sectionOrderButton");
+    const contactForm = document.getElementById("contactForm");
     const formatter = new Intl.NumberFormat("de-CH", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
     function formatPrice(value) {
@@ -1293,7 +1911,13 @@
     function filterMenu() {
       const query = state.query.trim().toLowerCase();
       return menuItems.filter(item => {
-        const matchesFilter = state.filter === "alle" || item.type === state.filter || item.category === state.filter;
+        const matchesFilter =
+          state.filter === "alle" ||
+          (state.filter === "mittagsmenu" && item.type === "speisen") ||
+          (state.filter === "hauptspeisen" && item.type === "speisen" && item.category !== "vorspeisen") ||
+          (state.filter === "bier" && item.name.toLowerCase().includes("bier")) ||
+          item.type === state.filter ||
+          item.category === state.filter;
         const haystack = `${item.name} ${item.description} ${item.categoryLabel}`.toLowerCase();
         return matchesFilter && (!query || haystack.includes(query));
       });
@@ -1395,6 +2019,37 @@
       renderMenu();
     }
 
+    function openNavSearch() {
+      if (!navSearchButton || !navSearchPanel || !search) return;
+      navSearchPanel.hidden = false;
+      navSearchPanel.classList.add("is-open");
+      navSearchButton.setAttribute("aria-expanded", "true");
+      window.requestAnimationFrame(() => {
+        search.focus();
+        search.select();
+      });
+    }
+
+    function closeNavSearch() {
+      if (!navSearchButton || !navSearchPanel) return;
+      navSearchPanel.classList.remove("is-open");
+      navSearchPanel.hidden = true;
+      navSearchButton.setAttribute("aria-expanded", "false");
+    }
+
+    function applyMenuSearch(value, shouldScroll) {
+      state.query = value;
+      if (search && search.value !== value) search.value = value;
+      if (state.filter === "getraenke" && value.trim()) {
+        setFilter("alle");
+      } else {
+        renderMenu();
+      }
+      if (shouldScroll) {
+        document.getElementById("menu").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
     const drawer = document.getElementById("cartDrawer");
     const backdrop = document.getElementById("drawerBackdrop");
     let lastFocus = null;
@@ -1435,10 +2090,33 @@
       const button = event.target.closest("[data-filter]");
       if (button) setFilter(button.dataset.filter);
     });
-    search.addEventListener("input", event => {
-      state.query = event.target.value;
-      renderMenu();
-    });
+    if (navSearchButton) {
+      navSearchButton.addEventListener("click", () => {
+        if (navSearchPanel && navSearchPanel.classList.contains("is-open")) {
+          closeNavSearch();
+        } else {
+          openNavSearch();
+        }
+      });
+    }
+    if (search) {
+      search.addEventListener("input", event => {
+        applyMenuSearch(event.target.value, false);
+      });
+      search.addEventListener("keydown", event => {
+        if (event.key !== "Enter") return;
+        event.preventDefault();
+        applyMenuSearch(event.target.value, true);
+        closeNavSearch();
+      });
+    }
+    if (navSearchForm) {
+      navSearchForm.addEventListener("submit", event => {
+        event.preventDefault();
+        applyMenuSearch(search ? search.value : "", true);
+        closeNavSearch();
+      });
+    }
     grid.addEventListener("click", event => {
       const button = event.target.closest("[data-add]");
       if (button) addToCart(button.dataset.add);
@@ -1446,15 +2124,24 @@
     document.querySelectorAll("[data-filter-link]").forEach(link => {
       link.addEventListener("click", () => setFilter(link.dataset.filterLink));
     });
+    [navOrderButton, sectionOrderButton].filter(Boolean).forEach(button => {
+      button.addEventListener("click", openDrawer);
+    });
     document.getElementById("cartOpen").addEventListener("click", openDrawer);
     document.getElementById("cartClose").addEventListener("click", closeDrawer);
     backdrop.addEventListener("click", closeDrawer);
     document.addEventListener("keydown", event => {
       if (event.key === "Escape") {
         closeDrawer();
+        closeNavSearch();
         document.getElementById("navLinks").classList.remove("is-open");
         document.getElementById("menuToggle").setAttribute("aria-expanded", "false");
       }
+    });
+    document.addEventListener("click", event => {
+      if (!navSearchPanel || !navSearchButton || navSearchPanel.hidden) return;
+      if (navSearchPanel.contains(event.target) || navSearchButton.contains(event.target)) return;
+      closeNavSearch();
     });
     document.getElementById("cartItems").addEventListener("click", event => {
       const qtyButton = event.target.closest("[data-qty]");
@@ -1492,6 +2179,34 @@
         document.getElementById("formStatus").textContent = "Ihr E-Mail-Programm wurde geöffnet.";
       }, 600);
     });
+
+    if (contactForm) {
+      contactForm.addEventListener("submit", event => {
+        event.preventDefault();
+        const name = document.getElementById("contactName").value.trim();
+        const email = document.getElementById("contactEmail").value.trim();
+        const subject = document.getElementById("contactSubject").value.trim() || "Anfrage über die Maria Saigon Website";
+        const message = document.getElementById("contactMessage").value.trim();
+        const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        document.getElementById("contactNameField").classList.toggle("is-error", !name);
+        document.getElementById("contactEmailField").classList.toggle("is-error", !isEmailValid);
+        if (!name || !isEmailValid) {
+          document.getElementById("contactStatus").textContent = "Bitte prüfen Sie die markierten Felder.";
+          return;
+        }
+        const body = [
+          `Name: ${name}`,
+          `E-Mail: ${email}`,
+          "",
+          message || "-"
+        ].join("\n");
+        document.getElementById("contactStatus").textContent = "Ihr E-Mail-Programm wird geöffnet...";
+        window.location.href = `mailto:${ORDER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.setTimeout(() => {
+          document.getElementById("contactStatus").textContent = "Ihre Nachricht wurde vorbereitet.";
+        }, 500);
+      });
+    }
 
     renderTabs();
     renderMenu();
